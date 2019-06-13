@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <title>Hello, grid!</title>
+    <style>
+
+    .container > div{
+        color:#fff;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container > div > img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .container > div:nth-child(1n){
+        background-color: #C1DBB3;
+    }
+    .container > div:nth-child(3n){
+        background-color: #7798AB;
+    }
+    .container > div:nth-child(2n){
+        background-color: #FF8966;
+    }
+    .container > div:nth-child(4n){
+        background-color: #ffcc5c;
+    }
+    .container {
+        border: 1px solid black;
+        height: 100%;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(2, 100px);
+        justify-content: space-evenly;
+        align-content:center;
+    }
+    /* 
+        justify-content: center;
+        Justifies the content horizontally (start, center, end etc..)
+        space-between: Puts space between the elements.
+        space-evenly: Distributes space equally among the items.
+        space-aroud: First & last space would be of half of the size compare to the in-between spaces.
+        align-content:center;
+        Aligns the content vertically.
+    */
+
+
+   </style>
+
+  </head>
+  <body>
+
+        <p>justify-content</p>
+        <div class="container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+        </div>
+    </body>
+</html>

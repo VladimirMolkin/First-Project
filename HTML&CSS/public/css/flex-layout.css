@@ -1,0 +1,72 @@
+.flex-section {
+    display: flex;
+}
+
+.flex-article {
+    margin: 1rem;
+    flex-basis: 200px;
+    flex-shrink: 0; 
+}
+
+.breaking {
+    flex-grow: 2;
+}
+
+@media screen and (max-width: 750px) {
+    body > h1 { font-size: 2rem; }
+    .flex-section {
+        flex-direction: column;
+    }
+}
+
+.main {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+}
+
+.main > article {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #cccc33;
+    border-radius: 7pt;
+   
+    flex: 3 1 80%;
+    order: 2;
+}
+
+.main > aside {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+   
+    flex: 1 6 20%;
+    order: 3;
+}
+footer {
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    border: 1px solid #eebb55;
+    border-radius: 7pt;
+}
+
+@media all and (max-width: 640px) {
+    .main {
+        flex-direction: column;
+    }
+
+    header, .main > article, .main > aside {
+    /* Return them to document order */
+        order: 0;
+    }
+
+    .main > aside, footer {
+        min-height: 50px;
+        max-height: 50px;
+    }
+}

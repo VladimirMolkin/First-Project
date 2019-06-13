@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="css/widget.css">
+    <title>Hello, grid!</title>
+    
+
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            margin: 0px;
+        }
+        .container{
+            display:grid;    
+                /* grid-template-columns: repeat(12,1fr);
+                width: 100%;
+                grid-template-rows: 60px auto 140px; 
+                grid-gap: 5px;
+                grid-template-areas:
+                    "h h h h h h h h h h h h"
+                    "m m c c c c c c c c c c"
+                    "f f f f f f f f f f f f" */
+             
+            grid: 
+                "a a a c c c c c c c c c" minmax(100px, auto)
+                "f f f f f f f f f f f f" minmax(100px, auto);
+        }
+        .aside{
+                grid-area: a;
+        }
+        .content{
+                grid-area: c;
+        }
+        .footer{
+                grid-area: f;
+        }
+        
+        .container div:nth-child(1){
+            border: 2px solid #FF8966;
+        }
+        .container div:nth-child(2){
+            border: 2px solid #C1DBB3;
+        }
+        .container div:nth-child(3){
+            border: 2px solid #ffcc5c;
+        }
+            
+        .wrapper {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            border: 2px solid #CCC;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3,1fr);
+            justify-content: center;
+            align-content: end;
+        }
+                    
+        .box {
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 150%;
+        }
+            
+        .item1 {
+            grid-column: 1 / 5;
+            background-color: #00a;
+        }
+            
+        .item2 {
+            grid-column: 1 / 3;
+            grid-row: 2 / 4;
+            background-color: #a00;
+        }
+            
+        .item3 {
+            grid-column: 3 / 5;
+            background-color: #0a0;
+        }
+
+        .flex-box {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box-base {
+            background: #ff0;
+            min-height: 430px;
+            font-size: 5rem;
+            color: #eee;
+            flex: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-side {
+            margin-left: 30px;
+            display: flex;
+            flex: 0 0 220px;
+            flex-direction: column;
+        }
+        .box-itm {
+            background: #00f;
+            min-height: 200px;
+            font-size: 5rem;
+            color: #eee;
+            margin-bottom: 30px;
+            flex: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-itm:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (max-width: 800px) {
+            .box-base {
+                margin-bottom: 30px;
+                flex: 0 1 100%;
+            }
+            .box-side {
+                margin-left: 0;
+                flex: 1 1 100%;
+                flex-direction: row;
+            }
+            .box-itm {
+                margin: 0 0 0 30px;
+            }
+            .box-itm:first-child {
+                margin-left: 0;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .box-side {
+                flex-direction: column;
+            }
+            .box-itm {
+                margin: 0 0 30px;
+            }
+            .box-itm:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+
+        .flex-article {
+            flex-basis: 200px;
+            flex-shrink: 0; 
+        }
+
+        .flex-article img{
+            max-width: 100%;
+        }
+
+        .breaking {
+            flex-grow: 3;
+        }
+        .flex-video {
+                position: relative;
+                padding-top: 25px;
+                height: 0;
+                margin-bottom: 16px;
+                overflow: hidden;
+            }
+
+        .flex-video iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        @media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+                .flex-video { padding-top: 0; 
+            }
+        }
+
+        .flex-row{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto; /* выровняем по центру */
+        }
+
+        .flex-col{
+            flex: 1 1 calc(33.33% - 30px); 
+            margin:2px;
+            box-sizing: border-box; 
+            min-width: 100px; 
+            padding: 5px 2px; 
+            text-align:center; 
+        }
+        .flex-col img{
+            max-width: 100%;
+        }
+            
+    </style>
+
+  </head>
+  <body>
+    <div class="header">HEADER</div>
+    
+    <div class="container">
+        <aside class="aside">
+            <!-- sidebar-widget -->
+            <div class="sidebar-widget">
+                    <h3 class="sidebar-title">Top News</h3>
+                    <div class="widget-container widget-break-news">
+                        <a href=""><img src="images/break-news.jpg" alt=""></a>
+                        <h4>Major Fashion</h4>
+                        <p>While everyone’s eyes are glued to the runway, it’s hard to ignore that there are major fashion
+                            moments on the front row too.</p>
+                    </div>
+                </div>
+    
+                <!-- sidebar-widget -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">Featured Posts</h3>
+                    <div class="widget-container">
+                        <article class="widget-post">
+                            <div class="post-image">
+                                <a href="post.html"><img src="images/90x60.jpg" alt=""></a>
+                            </div>
+                            <div class="post-body">
+                                <h2><a href="post.html">The State of the Word 2019</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="fa fa-clock-o"></i> 2. august 2019</span> <span><a href="post.html"><i
+                                                class="fa fa-comment-o"></i> 23</a></span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="widget-post">
+                            <div class="post-image">
+                                <a href="post.html"><img src="images/90x60.jpg" alt=""></a>
+                            </div>
+                            <div class="post-body">
+                                <h2><a href="post.html">Why The Muppets Needs to Channel 30 Rock</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="fa fa-clock-o"></i> 2. august 2019</span> <span><a href="post.html"><i
+                                                class="fa fa-comment-o"></i> 23</a></span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="widget-post">
+                            <div class="post-image">
+                                <a href="post.html"><img src="images/90x60.jpg" alt=""></a>
+                            </div>
+                            <div class="post-body">
+                                <h2><a href="post.html">The State of the Word 2019</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="fa fa-clock-o"></i> 2. august 2019</span> <span><a href="post.html"><i
+                                                class="fa fa-comment-o"></i> 23</a></span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="widget-post">
+                            <div class="post-image">
+                                <a href="post.html"><img src="images/90x60.jpg" alt=""></a>
+                            </div>
+                            <div class="post-body">
+                                <h2><a href="post.html">Vintage-Inspired Finds for Your Home</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="fa fa-clock-o"></i> 2. august 2019</span> <span><a href="post.html"><i
+                                                class="fa fa-comment-o"></i> 23</a></span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="widget-post">
+                            <div class="post-image">
+                                <a href="post.html"><img src="images/90x60.jpg" alt=""></a>
+                            </div>
+                            <div class="post-body">
+                                <h2><a href="post.html">The State of the Word 2019</a></h2>
+                                <div class="post-meta">
+                                    <span><i class="fa fa-clock-o"></i> 2. august 2019</span> <span><a href="post.html"><i
+                                                class="fa fa-comment-o"></i> 23</a></span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!-- sidebar-widget -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <div class="widget-container">
+                        <ul>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Art</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Featured</a></li>
+                            <li><a href="#">Graphics</a></li>
+                            <li><a href="#">Peoples</a></li>
+                            <li><a href="#">Uncategorized</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+            
+        </aside>
+            <div class="wrapper content">
+                <div class="box item1">
+                        <h3>TV Star Cats</h3>
+
+                        <div class="flex-box">
+                            <div class="box-base flex-video">
+            
+                                <iframe class="" src="https://www.youtube.com/embed/uCLEq9V0-Yk" frameborder="0"
+                                    webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+                                </iframe>
+            
+                            </div>
+                            <div class="box-side">
+                                <div class="box-itm"><img src="images/cat2.jpg"></div>
+                                <div class="box-itm"><img src="images/cat3.jpg"></div>
+                            </div>
+                        </div>
+                        <h5>Jessica Walsh reporting</h5>
+                                <p>The first conclusive proof of the elusive Sasquatch was found today, when one of the ape-men was
+                                    found and killed by a hunter in the north-eastern corner of the state.
+                                    <p>The hunter plans to tour the pelt in the fall.
+                                </p>
+                </div>
+                <div class="box item2">
+                        <article class="flex-article breaking">
+                                <img src="images/cat4.jpg" alt="Photograph of a flying saucer over the US Capitol building">
+                                <h1>Washington D.C. Attacked By Flying Cats</h1>
+                                <p>The country was brought to a standstill today when flying saucers – presumably from Mars,
+                                        although Venusians have also been suspected – appeared over the nation’s capital, intent on
+                                        destruction. Curiously, they only attacked Pennsylvania Avenue, and have not appeared elsewhere
+                                        in the country.
+                                    </p>
+                                <h2>Dateline Washington D.C.</h2>
+                                <p>The country was brought to a standstill today when flying saucers – presumably from Mars,
+                                        although Venusians have also been suspected – appeared over the nation’s capital, intent on
+                                        destruction. Curiously, they only attacked Pennsylvania Avenue, and have not appeared elsewhere
+                                        in the country.
+                                    </p>
+                                <h3>Frank Bragg reporting</h3>
+                                <p>The country was brought to a standstill today when flying saucers – presumably from Mars,
+                                    although Venusians have also been suspected – appeared over the nation’s capital, intent on
+                                    destruction. Curiously, they only attacked Pennsylvania Avenue, and have not appeared elsewhere
+                                    in the country.
+                                </p>
+                                <p>The country was brought to a standstill today when flying saucers – presumably from Mars,
+                                        although Venusians have also been suspected – appeared over the nation’s capital, intent on
+                                        destruction. Curiously, they only attacked Pennsylvania Avenue, and have not appeared elsewhere
+                                        in the country.
+                                    </p>
+                                    <p>The country was brought to a standstill today when flying saucers – presumably from Mars,
+                                            although Venusians have also been suspected – appeared over the nation’s capital, intent on
+                                            destruction. Curiously, they only attacked Pennsylvania Avenue, and have not appeared elsewhere
+                                            in the country.
+                                        </p>
+                            </article>
+                </div>
+                <div class="box item3">
+                        <h3>Адаптивные 3 колонки</h3>
+
+                        <div class="flex-row">
+                            <div class="flex-col"><img src="images/cat1.jpg"></div>
+                            <div class="flex-col"><img src="images/cat1.jpg"></div>
+                        </div>
+                        <div class="flex-row">
+                            <div class="flex-col"><img src="images/cat1.jpg"></div>
+                            <div class="flex-col"><img src="images/cat1.jpg"></div>
+                        </div>
+                        <div class="flex-row">
+                            <div class="flex-col"><img src="images/cat1.jpg"></div>
+                            <div class="flex-col"><img src="images/cat1.jpg"></div>
+                        </div>
+                        <h5>Jessica Walsh reporting</h5>
+                                <p>The first conclusive proof of the elusive Sasquatch was found today, when one of the ape-men was
+                                    found and killed by a hunter in the north-eastern corner of the state.
+                                    <p>The hunter plans to tour the pelt in the fall.
+                                </p>
+                </div>
+                <div class="box item4">
+                        <article class="flex-article">
+                                <img src="images/cat3.jpg" alt="Photograph of a Bigfoot">
+                                <h3>Bigfoot Found, Shot, Killed</h3>
+                                <h4>Dateline Washington State</h4>
+                                <h5>Jessica Walsh reporting</h5>
+                                <p>The first conclusive proof of the elusive Sasquatch was found today, when one of the ape-men was
+                                    found and killed by a hunter in the north-eastern corner of the state.
+                                    
+                            </article>
+                </div>
+                <div class="box item5">
+                        <article class="flex-article">
+                                <img src="images/cat3.jpg" alt="Photograph of a Bigfoot">
+                                <h3>Bigfoot Found, Shot, Killed</h3>
+                                <h4>Dateline Washington State</h4>
+                                <h5>Jessica Walsh reporting</h>
+                                <p>The first conclusive proof of the elusive Sasquatch was found today, when one of the ape-men was
+                                    found and killed by a hunter in the north-eastern corner of the state.
+                                    <p>The hunter plans to tour the pelt in the fall.
+                                        </p>
+                            </article>
+                </div>
+            </div>
+                    
+        <div class="footer">FOOTER</div>
+    </div>                
+  </body>
+</html>

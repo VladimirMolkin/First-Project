@@ -1,0 +1,245 @@
+/* transform.css */
+
+/* 
+    figure:hover img  {
+        transform: rotate(120deg);
+    }
+ */
+
+
+/* figure:hover img {
+    transform: translateY(-50px);
+} */
+
+/* figure:hover img  {
+    transform: translateX(-150px) translateY(100px);
+} */
+
+/* figure:hover figcaption {
+    opacity: 1;
+    transform: translateY(50px);
+    transition: transform 0.4s, opacity 0.1s;
+} */
+
+/* figure:hover figcaption {
+    opacity: 1;
+    transform: translateY(-100px) translateX(100px);
+    transition: transform 0.4s, opacity 0.1s; 
+} */
+
+/* figure:hover img  {
+    transform: translate(-150px, 100px);
+} */
+
+/* figure:hover figcaption {
+    opacity: 1;
+    transform: translate(100px, -100px);
+    transition: transform 0.4s, opacity 0.1s; 
+} */
+
+
+figure:hover img  {
+  transform: scaleX(-1);
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}
+figure:nth-of-type(1) {
+  background: #F06E58;
+  transition-timing-function: linear;
+}
+
+
+/* figure:hover figcaption {
+    opacity: 1;
+    transform: scaleY(2);
+    transition: transform 0.4s, opacity 0.1s;
+} */
+
+/* figure:hover img  {
+    transform: scale(1.2, 0.5);
+} */
+
+
+/* figure:hover img  {
+    transform: skewX(20deg);
+} */
+
+/* figure:hover figcaption {
+    opacity: 1;
+    transform: skewY(-20deg);
+    transition: transform 0.4s, opacity 0.1s;
+} */
+
+/* 
+figure:hover figcaption {
+    opacity: 1;
+    transform: skew(-20deg, 20deg);
+    transition: transform 0.4s, opacity 0.1s;
+} */
+
+
+/* figure:hover img  {
+    transform: matrix(1.2,0,0.5,1.2,50,0);
+} */
+
+/* figure:hover figcaption {
+    opacity: 1;
+    transform: matrix(.8,1,1.5,0.2,80,1);
+    transition: transform 0.4s, opacity 0.1s;
+} */
+
+
+/* figure:hover img  {
+    transform-origin: top left;
+   
+    transform: rotate(120deg);
+} */
+
+ /* transform-origin: 110% 110%; */
+    /* transform-origin: 50px 50px; */
+
+/* figure img {
+        transition: transform 0.4s;
+        transition: .5s;
+    } 
+*/
+
+
+a {
+    transition: all 0.3s ease-out;
+}
+
+
+p:nth-of-type(1) {
+    background: #F06E58;
+    transition-timing-function: linear;
+}
+
+p:nth-of-type(2) {
+    background: #FEA45D;
+    transition-timing-function: ease;
+}
+
+p:nth-of-type(3) {
+    background: #FDF569;
+    transition-timing-function: ease-in;
+}
+
+p:nth-of-type(4) {
+    background: #B9EA7B;
+    transition-timing-function: ease-out;
+}
+
+p:nth-of-type(5) {
+    background: #B9ECFE;
+    transition-timing-function: ease-in-out;
+}
+
+p:nth-of-type(6) {
+    background: #82DDFF;
+    transition-timing-function: cubic-bezier(0.6, 0.1, 0.15, 0.8);
+}
+
+#go:target p{
+    transform:translateX(300px) translateY(150px)
+}
+
+
+  
+.box1 {
+    background:#BED3E4;
+    transition: 1s linear;
+}
+.box2 {
+    background:#BCB4D9;
+    transition: 1s linear .5s;
+}
+.box3 {
+    background:#EBC0AD;
+    transition: 1s linear 1s;
+}
+
+.one, .two, .three {
+    border: 5px solid transparent;
+    width: 200px; 
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .one {
+    background-color: #B0CBC4;
+  }
+  .one:hover {
+    border: 5px solid #B0CBC4;
+    background-color: #F2EBD8;
+    border-top-left-radius: 100% 20px;
+    border-bottom-right-radius: 100% 20px;
+  }
+  .two {
+    background-color: #9F908F;
+  }
+  .two:hover {
+    border: 5px inset #9F908F;
+    background-color: #E0CABB;
+  }
+  .three {
+    background-color: #FBE2A9;
+    border: 5px solid #FFD18F;
+    outline: 5px solid transparent;
+  }
+  .three:hover {
+    outline: 5px solid #9E8463;
+    outline-offset: 5px;
+  }
+  .four {
+    width: 200px;
+    height: 100px;
+    background-color: #95A1B1;
+    margin: 0 auto;
+  }
+  .four:hover {
+    width: 250px;
+    height: 80px;
+    box-shadow: 0 15px 15px -10px rgba(0,0,0, .5);
+  }
+  .five {
+    width: 100px;
+    height: 100px;
+    background-color: #E0CABB;
+    margin: 0 auto;
+    position: relative;
+    left: 50px;
+  }
+  .five:hover {
+    left: -50px;
+  }
+  img {width: 100%; display: block;}
+  img:hover {opacity: 0.5;}
+  .six {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    box-shadow: 
+      0 2px 4px rgba(0,0,0, .2),
+      0 -2px 4px rgba(0,0,0, .2);
+    background: url("../images/cat5.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  .six:hover {
+    background-position: top center;
+  }
+  .seven {
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: white;
+    background-image: -webkit-radial-gradient(#9ed8d3 2px, rgba(255,0,0,0) 3px);
+    background-image: -o-radial-gradient(#9ed8d3 2px, rgba(255,0,0,0) 3px);
+    background-image: radial-gradient(#9ed8d3 2px, transparent 3px);
+    background-size: 10px 10px;
+  }
+  .seven:hover {
+    background-size: 20px 20px;
+  }
+  

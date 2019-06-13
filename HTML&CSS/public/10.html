@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <title>Hello, grid!</title>
+    <style>
+
+    .container > div, .container2 > div{
+    color:#fff;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > div > img, .container2 > div > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.container > div:nth-child(1n),
+.container2 > div:nth-child(1n){
+    background-color: #C1DBB3;
+}
+.container > div:nth-child(3n),
+.container2 > div:nth-child(3n){
+    background-color: #7798AB;
+}
+.container > div:nth-child(2n),
+.container2 > div:nth-child(2n){
+    background-color: #FF8966;
+}
+.container > div:nth-child(4n),
+.container2 > div:nth-child(4n){
+    background-color: #ffcc5c;
+}
+
+.container {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+
+.container2 {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+   </style>
+
+  </head>
+  <body>
+
+        <h1 class="title">AUTO-FIT</h1>
+        <div class="container">
+            <div class="vertical">
+                <img src="images/cat1.jpg"/>
+            </div>
+            <div class="vertical">
+                <img src="images/cat2.jpg"/>
+            </div>
+            <div class="vertical">
+                <img src="images/cat3.jpg"/>
+            </div>
+            <div class="vertical">
+                <img src="images/cat4.jpg"/>
+            </div>
+            <div class="vertical">
+                <img src="images/cat5.jpg"/>
+            </div>
+        </div>
+        <h1 class="title">AUTO-FILL</h1>
+        <div class="container2">
+                <div class="vertical">
+                        <img src="images/cat1.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat2.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat3.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat4.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat5.jpg"/>
+                    </div>
+        </div>
+
+  </body>
+</html>

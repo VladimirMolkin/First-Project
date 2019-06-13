@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <title>Hello, grid!</title>
+    <style>
+
+    .container > div{
+    color:#fff;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > div > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.container > div:nth-child(1n){
+    background-color: #C1DBB3;
+}
+.container > div:nth-child(3n){
+    background-color: #7798AB;
+}
+.container > div:nth-child(2n){
+    background-color: #FF8966;
+}
+.container > div:nth-child(4n){
+    background-color: #ffcc5c;
+}
+
+   .container{
+        display:grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+        grid-auto-rows: 75px;
+        grid-auto-flow: dense;    
+    }
+    /* 
+        grid-auto-flow: row ::  It means containers will be placed one by one & one row at a time. 
+        grid-auto-flow: dense ::  Attempts to fill up the holes.
+        Source order independence which means grid can reorder the layout regardless of how it is written in markup.
+    */
+    .horizontal{
+        /* 
+            For horizontal images, apply grid-column property.
+            grid-column: 1 / span 2 :: This would always start with column 1 irrespective of available space in previous row.
+            Instead, use grid-column: auto / span 2; || grid-column: span 2;
+        */
+        grid-column: span 2;
+    }
+    .vertical{
+        grid-row: span 3;
+    }
+    .square{
+        grid-column: span 3;
+        grid-row: span 3;
+    }
+
+   </style>
+
+  </head>
+  <body>
+
+        <div class="container">
+                <div class="vertical">
+                    <img src="images/cat1.jpg"/>
+                </div>
+                <div class="vertical">
+                    <img src="images/cat2.jpg"/>
+                </div>
+                <div class="vertical">
+                    <img src="images/cat3.jpg"/>
+                </div>
+                <div class="vertical">
+                    <img src="images/cat4.jpg"/>
+                </div>
+                <div class="vertical">
+                    <img src="images/cat5.jpg"/>
+                </div>
+                <div class="vertical">
+                        <img src="images/cat1.jpg"/>
+                </div>
+                <div class="vertical">
+                        <img src="images/cat2.jpg"/>
+                </div>
+                <div class="vertical">
+                        <img src="images/cat3.jpg"/>
+                </div>
+                    <div class="vertical">
+                        <img src="images/cat4.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat5.jpg"/>
+                    </div>
+                    <div class="vertical">
+                            <img src="images/cat1.jpg"/>
+                        </div>
+                        <div class="vertical">
+                            <img src="images/cat2.jpg"/>
+                        </div>
+                        <div class="vertical">
+                            <img src="images/cat3.jpg"/>
+                        </div>
+                        <div class="vertical">
+                            <img src="images/cat4.jpg"/>
+                        </div>
+                        <div class="vertical">
+                            <img src="images/cat5.jpg"/>
+                        </div>
+                        <div class="vertical">
+                                <img src="images/cat1.jpg"/>
+                            </div>
+                            <div class="vertical">
+                                <img src="images/cat2.jpg"/>
+                            </div>
+                            <div class="vertical">
+                                <img src="images/cat3.jpg"/>
+                            </div>
+                            <div class="vertical">
+                                <img src="images/cat4.jpg"/>
+                            </div>
+                            <div class="vertical">
+                                <img src="images/cat5.jpg"/>
+                            </div>
+                            <div class="vertical">
+                                    <img src="images/cat1.jpg"/>
+                                </div>
+                                <div class="vertical">
+                                    <img src="images/cat2.jpg"/>
+                                </div>
+                                <div class="vertical">
+                                    <img src="images/cat3.jpg"/>
+                                </div>
+                                <div class="vertical">
+                                    <img src="images/cat4.jpg"/>
+                                </div>
+                                <div class="vertical">
+                                    <img src="images/cat5.jpg"/>
+                                </div>
+                                <div class="vertical">
+                                        <img src="images/cat1.jpg"/>
+                                    </div>
+                                    <div class="vertical">
+                                        <img src="images/cat2.jpg"/>
+                                    </div>
+                                    <div class="vertical">
+                                        <img src="images/cat3.jpg"/>
+                                    </div>
+                                    <div class="vertical">
+                                        <img src="images/cat4.jpg"/>
+                                    </div>
+                                    <div class="vertical">
+                                        <img src="images/cat5.jpg"/>
+                                    </div>
+            </div>    
+  </body>
+</html>

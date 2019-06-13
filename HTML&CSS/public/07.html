@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Hello, grid!</title>
+    <style>
+    /*
+        You can use auto as well as fr on rows but it will work based on the height of parent element.
+    */
+
+    .container{
+        height: 100%;
+        display:grid;    
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 60px auto 140px; 
+        grid-gap: 5px;
+        /*
+            grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m c c c c c c c c c c"
+            "f f f f f f f f f f f f"
+                Naming your layout based on the available columns & rows. Similar letters should form a rectangle to work. Use '.' for blank cells.
+        */
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m c c c c c c c c c c"
+            "f f f f f f f f f f f f"
+    }
+    .header{
+        /* Use the name defined in template-area to define element's area. It will take up that much rows & columns.  */
+        grid-area: h;
+    }
+    .menu{
+        grid-area: m;
+    }
+    .content{
+        grid-area: c;
+    }
+    .footer{
+        grid-area: f;
+    }
+
+    .container div{
+        color:#fff;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container div:nth-child(1n){
+        background-color: #C1DBB3;
+    }
+    .container div:nth-child(3n){
+        background-color: #7798AB;
+    }
+    .container div:nth-child(2n){
+        background-color: #FF8966;
+    }
+    .container div:nth-child(4n){
+        background-color: #ffcc5c;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="menu">MENU</div>
+        <div class="content">CONTENT</div>
+        <div class="footer">FOOTER</div>
+    </div>
+    
+  </body>
+</html>

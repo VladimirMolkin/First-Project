@@ -1,0 +1,89 @@
+/* primary navigation */
+
+.navbar label {
+    display: none;
+    font-size: 30px;
+    position: fixed;
+    padding: 2px 10px 5px 5px;
+    top: 8px;
+    left: 0;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.navbar input[type="checkbox"] + label {
+    color: #fff;
+} 
+
+.navbar input[type="checkbox"]:checked + label {
+    color: #fed136;
+    font-style: normal;
+} 
+
+.navbar input[type="checkbox"] {
+    display: none;
+  }
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        display: block;
+        background: rgba(52, 27, 43);
+        height: 50px; 
+    }
+    .navbar label {
+      display: block;
+    }
+    .navbar input[type="checkbox"]:checked ~.navbar-nav  {
+        left: 0;
+    }
+   .navbar .navbar-nav {
+     float: left;
+    }
+}
+
+
+/* screenwidth less than 768px - mobile/smaller tablets
+---------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+   /* mobile navigation */
+   .navbar .navbar-nav {
+        position: fixed;
+        left: -250px;
+        top: 50px;
+        bottom: 0;
+        width: 230px;
+        margin: 0;
+        background: rgba(52, 27, 43);
+        -webkit-transition: all 200ms ease-in-out;
+        transition: all 200ms ease-in-out;
+        box-shadow: 2px 2px 5px #9FCC7F;
+   }
+
+    /* remove float left on 1st level list items */
+	ul.navbar-nav > li { float: none; }
+
+    ul.navbar-nav > li {
+        display: block;
+        height: auto;      
+        text-align: left;
+        border-bottom: 1px dotted #D3D5DA;
+        padding: 6px;
+    }
+
+    ul.navbar-nav > li:first-child {
+        border-top: 1px dotted #D3D5DA;
+    }
+    
+    ul.navbar-nav li a {  
+        display: block;   
+        width: auto;  
+        padding: 1em 0.5em;
+        line-height: 16px; /* reset line-height from 40px */
+        border: none;
+    } 
+    ul.navbar-nav li.nav-item.active > a {
+        padding: 1em 0.5em;
+        color: #fed136;
+    } 
+}

@@ -1,0 +1,24 @@
+.fade-passive{
+    transform: opacity 1s;
+    opacity: 1;
+}
+
+.fade{
+    opacity: 0;
+    transform: opacity 1s;
+}
+
+.fade-active {
+    transform: opacity 1s;
+    opacity: 0;
+}
+
+.offset-img {
+    // opacity: 0.5;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height:150px;
+    width:150px;
+}

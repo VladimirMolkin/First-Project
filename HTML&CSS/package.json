@@ -1,0 +1,31 @@
+{
+  "name": "html-g12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/couchjanus/html-g12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/couchjanus/html-g12/issues"
+  },
+  "homepage": "https://github.com/couchjanus/html-g12#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.4.8",
+    "jshint": "^2.10.1",
+    "jslint": "^0.12.1",
+    "postcss-nested": "^4.1.1",
+    "sass": "^1.17.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "javascript-g12",
+  "version": "1.0.0",
+  "description": "Javascript SPA Shpaholic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "mock:server": "json-server --watch db.json",
+    "dev": "concurrently -k \"npm run mock:server\" \"parcel src/index.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/couchjanus/javascript-g12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/couchjanus/javascript-g12/issues"
+  },
+  "homepage": "https://github.com/couchjanus/javascript-g12#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "concurrently": "^4.1.0",
+    "jshint": "^2.10.1",
+    "jslint": "^0.12.1",
+    "prettier": "1.16.4",
+    "sass": "^1.17.2"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1"
+  }
+}

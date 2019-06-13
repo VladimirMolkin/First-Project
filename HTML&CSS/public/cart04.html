@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Shopping cart</title>
+
+    <style>
+
+            :root {
+                --product-bg-color: lightgrey;
+                --box-shadow:rgba(10, 18, 20, 0.54902) 0px 4px 13px 3px;
+                --menu-color: whitesmoke;
+                --product-hover:#fed136;
+                --product-border-color: rgba(10, 18, 20, 0.54902);
+
+            }
+                
+            .grid-container{
+                    display:grid;
+                    grid-gap: 5px; 
+                    grid-template: repeat(1, 1fr) / repeat(3, minmax(200px,1fr));
+            }
+                        
+            .grid-container .grid-item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            }
+                         
+            .grid-container article img {
+                    padding: 0;
+                    max-width: 100%;
+            }
+                   
+            .product{
+                    background-color: var(--product-bg-color);
+                    background-color: -webkit-var(--product-bg-color);
+                    text-align: center;
+                    border-radius: 10px;
+                    width: 250px;
+                    height: 360px;
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: var(--box-shadow);
+                    box-shadow: -webkit-var(--box-shadow);
+            }
+                
+            .product-back {
+                    width: 250px;
+                    height: 360px;
+                    border-radius: 10px;
+                    background-color: var(--product-bg-color);
+                    background-color: -webkit-var(--product-bg-color);
+                    color: #EE3B24;
+                    text-align: center;
+                    margin: 0 auto;
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: var(--box-shadow);
+                    box-shadow: -webkit-var(--box-shadow);
+                    backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
+                    z-index: -1;
+                    top: -360px;
+                    transform: rotateY(180deg);
+            }
+            
+            .product-name {
+                padding: 0.5rem 0;
+                font-size: 1.4em;
+                background-color: var(--product-bg-color);
+                background-color: -webkit-var(--product-bg-color);
+            }
+
+            .product-menu {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                height: 360px;
+                background-color: var(--product-bg-color);
+                background-color: -webkit-var(--product-bg-color);
+                color: var(--menu-color);
+                position: absolute;
+                top: 80%;
+                transition: all .7s;
+            }
+
+            .product-price, .buy-now {
+                position: relative;
+                font-size: 1.5rem;
+                padding-top: 20px;
+                width: 50%;
+                color: var(--menu-color);
+                border-top: solid 1px var(--product-border-color);
+            }
+            
+            .buy-now {
+                border-left: solid 1px var(--product-border-color);
+                cursor: pointer;
+                transition: all .3s;
+            }
+
+            .buy-now:hover {
+                background-color: var(--product-hover);
+                color: var(--menu-color);
+            }
+
+            .product-detail, .cancel, .add-to-cart, .how-many{
+                display: none;
+            }
+
+               
+        </style>
+
+</head>
+
+<body>
+
+    <!-- Main -->
+    <div class="grid-container">
+        <article class="grid-item">
+            <div class="product-wrapper">
+                <div class="product">
+                    <p class="product-name">Very&nbsp;Nice&nbsp;Cat</p>
+                    <div class="icon">
+                        <div class="icon-background"></div>
+                        <span class="shopping-cart">
+                            <i class="fa fa-shopping-cart fa-2x"></i>
+                        </span>
+                    </div>
+                    <div class="product-picture">
+                        <img src="images/cat3.jpg" alt="Nice Cat" />
+                    </div>
+                    <div class="product-menu">
+                        <div class="product-price">
+                            $9.99
+                        </div>
+                        <div class="buy-now">
+                            Buy now!
+                        </div>
+                        <div class="product-detail">
+                            Detail
+                        </div>
+
+                        <div class="how-many">
+                            <div class="quantity-input">
+                                <input class="minus btn" type="button" value="-">
+                                <input class="input-text quantity text" value="3" size="4">
+                                <input class="plus btn" type="button" value="+">
+                            </div>
+                        </div>
+                        <div class="cancel">
+                            Cancel
+                        </div>
+                        <div class="add-to-cart">
+                            Add to Cart!
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+                    <span class="check">
+                        <i class="fa fa-check fa-4x"></i>
+                        <p>Success!</p>
+                    </span>
+
+                </div>
+            </div>
+        </article>
+        
+    </div>
+
+
+    <!-- start section footer -->
+    <footer id="footer" class="footer text-center">
+        <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+    </footer>
+
+    <!-- End section footer -->
+
+</body>
+
+</html>

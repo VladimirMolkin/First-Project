@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Page</title>
+    <meta name="description" lang="ua" content="Описание содержимого страницы">
+    <meta name="description" lang="en" content="Description">
+    <meta name="keywords" lang="ua" content="Ключевые слова через запятую">
+    <meta name="keywords" lang="en" content="Keywords">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" href="./favicon.ico">
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800'>
+
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/transform.css">
+    <link rel="stylesheet" href="css/carousel.css">
+
+    <style>
+        figure{
+        margin: 0 0 0 4px;
+        text-align: left;
+        position: relative;
+    }
+
+    figure img {
+        max-width: 100%;
+        display: block;
+        position: relative;
+    }
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0px;
+        padding-bottom: 1em;
+        background: rgba(52, 27, 43, 0.5); 
+        width: 100%;
+        color: #eee;
+        text-align: center;
+    }
+
+    figcaption h3 {
+        margin: 3px 0;
+        padding: 0;
+        color: #fff;
+    }
+
+    figcaption h3:before {
+        content: 'I ♥ ';
+    }
+
+    figcaption a {
+        margin: 0 auto;
+        display: block;
+        width:50%;
+        border: 1px solid #FFD18F;
+        outline: 2px solid transparent;
+        border-radius: 5px;
+        background: rgb(52, 27, 43);
+        color: #fff;
+    }
+    
+    figcaption a:hover {
+        outline: 2px solid #9E8463;
+        outline-offset: 5px;
+    }
+
+    div figure {
+        overflow: hidden;
+    }
+
+
+    h1 {
+        font-size: 60px;
+        text-align: center;
+      }
+    
+    </style>
+
+</head>
+
+<body>
+    <div id="page-wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="#" class="logo" target="_blank">Peculiar Shopaholic</a>
+            <input type="checkbox" id="menu-trigger" />
+            <label class='label' for="menu-trigger">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./blog.html">Blog </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- Main -->
+        <article id="main">
+
+            <header class="special container">
+                <span class="icon fa fa-bar-chart-o"></span>
+                <h2>Carousel</h2>
+            </header>
+            <section class="wrapper style3 container special">
+                <div class="content-slider">
+                    <div class="slider">
+                        <div class="mask">
+                            <ul>
+                                <li class="anim1">
+                                    <div class="row">
+                                        <div class="6u">
+                                            <img src="images/cat1.jpg">
+                                        </div>
+                                        <div class="6u">
+                                            <div class="quote">Hello, this is a quote from a person.</div>
+                                            <div class="source">- Person</div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="anim2">
+                                    <div class="row">
+
+                                        <div class="6u">
+                                            <div class="quote">Hello, this is a quote from another person.</div>
+                                            <div class="source">- Another person</div>
+                                        </div>
+                                        <div class="6u">
+                                            <img src="images/cat2.jpg">
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="anim3">
+                                    <div class="row">
+                                        <div class="6u">
+                                            <img src="images/cat3.jpg">
+                                        </div>
+                                        <div class="6u">
+                                            <div class="quote">Hello, this is a quote from an animal.</div>
+                                            <div class="source">- Animal</div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="anim4">
+                                    <div class="row">
+
+                                        <div class="6u">
+                                            <div class="quote">Hello, this is a quote from a plant.</div>
+                                            <div class="source">- Plant</div>
+                                        </div>
+                                        <div class="6u">
+                                            <img src="images/cat4.jpg">
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="anim5">
+                                    <div class="row">
+                                        <div class="6u">
+                                            <img src="images/cat3.jpg">
+                                        </div>
+                                        <div class="6u">
+                                            <div class="quote">How do ya like that.</div>
+                                            <div class="source">- Cassidy</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <header class="special container">
+                <span class="icon fa fa-bar-chart-o"></span>
+                <h2>Carousel</h2>
+            </header>
+
+            <section class="wrapper style3 container special">
+                <div class="row">
+
+                    <div class="carousel-container 6u">
+                        <h2>fade in/out</h2>
+                        <ul class="carousel my-carousel">
+                            <input class="carousel__activator" type="radio" id="A" name="activator" checked="checked" />
+                            <input class="carousel__activator" type="radio" id="B" name="activator" />
+                            <input class="carousel__activator" type="radio" id="C" name="activator" />
+                            <input class="carousel__activator" type="radio" id="D" name="activator" />
+                            <input class="carousel__activator" type="radio" id="E" name="activator" />
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="E"></label>
+                                <label class="carousel__control carousel__control--forward" for="B"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="A"></label>
+                                <label class="carousel__control carousel__control--forward" for="C"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="B"></label>
+                                <label class="carousel__control carousel__control--forward" for="D"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="C"></label>
+                                <label class="carousel__control carousel__control--forward" for="E"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="D"></label>
+                                <label class="carousel__control carousel__control--forward" for="A"></label>
+                            </div>
+                            <li class="carousel__slide">
+                                <h1>A</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>B</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>C</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>D</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>E</h1>
+                            </li>
+                            <div class="carousel__indicators">
+                                <label class="carousel__indicator" for="A"></label>
+                                <label class="carousel__indicator" for="B"></label>
+                                <label class="carousel__indicator" for="C"></label>
+                                <label class="carousel__indicator" for="D"></label>
+                                <label class="carousel__indicator" for="E"></label>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="carousel-container 6u">
+                        <h2>slider</h2>
+                        <div class="carousel my-carousel carousel--translate">
+                            <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked" />
+                            <input class="carousel__activator" type="radio" name="carousel" id="G" />
+                            <input class="carousel__activator" type="radio" name="carousel" id="H" />
+                            <input class="carousel__activator" type="radio" name="carousel" id="I" />
+                            <input class="carousel__activator" type="radio" name="carousel" id="J" />
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="J"></label>
+                                <label class="carousel__control carousel__control--forward" for="G"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="F"></label>
+                                <label class="carousel__control carousel__control--forward" for="H"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="G"></label>
+                                <label class="carousel__control carousel__control--forward" for="I"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="H"></label>
+                                <label class="carousel__control carousel__control--forward" for="J"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="I"></label>
+                                <label class="carousel__control carousel__control--forward" for="F"></label>
+                            </div>
+                            <div class="carousel__track">
+                                <li class="carousel__slide">
+                                    <h1>F</h1>
+                                </li>
+                                <li class="carousel__slide">
+                                    <h1>G</h1>
+                                </li>
+                                <li class="carousel__slide">
+                                    <h1>H</h1>
+                                </li>
+                                <li class="carousel__slide">
+                                    <h1>I</h1>
+                                </li>
+                                <li class="carousel__slide">
+                                    <h1>J</h1>
+                                </li>
+                            </div>
+                            <div class="carousel__indicators">
+                                <label class="carousel__indicator" for="F"></label>
+                                <label class="carousel__indicator" for="G"></label>
+                                <label class="carousel__indicator" for="H"></label>
+                                <label class="carousel__indicator" for="I"></label>
+                                <label class="carousel__indicator" for="J"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-container 6u">
+                        <h2>thumbnail indicators</h2>
+                        <ul class="carousel my-carousel carousel--thumb">
+                            <input class="carousel__activator" type="radio" id="K" name="thumb" checked="checked" />
+                            <input class="carousel__activator" type="radio" id="L" name="thumb" />
+                            <input class="carousel__activator" type="radio" id="M" name="thumb" />
+                            <input class="carousel__activator" type="radio" id="N" name="thumb" />
+                            <input class="carousel__activator" type="radio" id="O" name="thumb" />
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="O"></label>
+                                <label class="carousel__control carousel__control--forward" for="L"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="K"></label>
+                                <label class="carousel__control carousel__control--forward" for="M"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="L"></label>
+                                <label class="carousel__control carousel__control--forward" for="N"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="M"></label>
+                                <label class="carousel__control carousel__control--forward" for="O"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="N"></label>
+                                <label class="carousel__control carousel__control--forward" for="K"></label>
+                            </div>
+                            <li class="carousel__slide">
+                                <h1>K</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>L</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>M</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>N</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>O</h1>
+                            </li>
+                            <div class="carousel__indicators">
+                                <label class="carousel__indicator" for="K"></label>
+                                <label class="carousel__indicator" for="L"></label>
+                                <label class="carousel__indicator" for="M"></label>
+                                <label class="carousel__indicator" for="N"></label>
+                                <label class="carousel__indicator" for="O"></label>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="carousel-container 6u">
+                        <h2>scale</h2>
+                        <ul class="carousel my-carousel carousel--scale">
+                            <input class="carousel__activator" type="radio" id="P" name="scale" checked="checked" />
+                            <input class="carousel__activator" type="radio" id="Q" name="scale" />
+                            <input class="carousel__activator" type="radio" id="R" name="scale" />
+                            <input class="carousel__activator" type="radio" id="S" name="scale" />
+                            <input class="carousel__activator" type="radio" id="T" name="scale" />
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="T"></label>
+                                <label class="carousel__control carousel__control--forward" for="Q"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="P"></label>
+                                <label class="carousel__control carousel__control--forward" for="R"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="Q"></label>
+                                <label class="carousel__control carousel__control--forward" for="S"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="R"></label>
+                                <label class="carousel__control carousel__control--forward" for="T"></label>
+                            </div>
+                            <div class="carousel__controls">
+                                <label class="carousel__control carousel__control--backward" for="S"></label>
+                                <label class="carousel__control carousel__control--forward" for="P"></label>
+                            </div>
+                            <li class="carousel__slide">
+                                <h1>P</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>Q</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>R</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>S</h1>
+                            </li>
+                            <li class="carousel__slide">
+                                <h1>T</h1>
+                            </li>
+                            <div class="carousel__indicators">
+                                <label class="carousel__indicator" for="P"></label>
+                                <label class="carousel__indicator" for="Q"></label>
+                                <label class="carousel__indicator" for="R"></label>
+                                <label class="carousel__indicator" for="S"></label>
+                                <label class="carousel__indicator" for="T"></label>
+                            </div>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </section>
+        </article>
+
+        <footer class="footer">
+            <div class="footer-socials">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-reddit"></i></a>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2020. All rights reserved.<br>
+                Design made by <a href="#">Couch Janus</a> <address>NAU, Kyiv, Ukraine </address>
+            </div>
+        </footer>
+
+    </div>
+    <script src="" async defer></script>
+</body>
+
+</html>

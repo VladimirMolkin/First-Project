@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <title>Hello, grid!</title>
+    <style>
+      /* 
+      Как работают элементы div?
+      div - элементы уровня блока. Они не будут терпеть никаких элементов ни с левой или с правой стороне и, таким образом, будут занимать всю ширину. Однако высота элементов div вычисляется из его потомков. div будет занимать столько высоты, сколько требуется для отображения содержимого.
+      */
+      .grid-container div{
+          color:#fff;
+          font-size: 2em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .grid-container div:nth-child(1n){
+          background-color: #C1DBB3;
+      }
+      .grid-container div:nth-child(3n){
+          background-color: #7798AB;
+      }
+      .grid-container div:nth-child(2n){
+          background-color: #FF8966;
+      }
+
+      .grid-container{
+          display:grid;
+          
+          /* 
+              :: grid-template-columns:repeat(3,1fr) :: 
+                  repeat(no of columns, width of a column)
+                  1fr takes the entire available width
+              :: grid-template-rows:repeat(2,1fr) :: 
+                  repeat(no of rows, height of a row)
+                  1fr takes the entire available width
+        
+          */
+          grid-template-columns:repeat(3,1fr); 
+          
+          grid-template-rows:repeat(2,1fr);
+          
+
+
+
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <h1>Hello, Grids Cats!</h1>
+
+    <div class="grid-container">
+      <div><img src="images/cat1.jpg"></div>
+      <div><img src="images/cat2.jpg"></div>
+      <div><img src="images/cat3.jpg"></div>
+      <div><img src="images/cat4.jpg"></div>
+      <div><img src="images/cat5.jpg"></div>
+      <div><img src="images/cat1.jpg"></div>
+    </div>
+
+  <!-- start section footer -->
+  <footer id="footer" class="footer text-center">
+    <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+  </footer>
+
+  <!-- End section footer -->
+
+  </body>
+</html>

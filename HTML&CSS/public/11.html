@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <title>Hello, grid!</title>
+    <style>
+p {
+    color: #96ceb4;
+    text-align: center;
+}
+
+.flexbox-header>div {
+    display: flex;
+    font-size: 1em;
+    padding: 10px 20px;
+}
+
+.flexbox-header {
+    background-color: #96ceb4;
+    color: #ffeead;
+}
+
+.header {
+    background-color: #96ceb4;
+}
+
+.header :nth-child(2) {
+    padding: 0 40px;
+}
+
+.menu {
+    background-color: #ff6f69;
+}
+
+.content {
+    background-color: #ffcc5c;
+}
+
+.footer {
+    background-color: #88d8b0;
+}
+
+.grid-page>div {
+    color: #ffeead;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+ 
+.flexbox-header {
+    display: flex;
+}
+
+.flexbox-header > div:nth-child(3) {
+    margin-left: auto;
+}
+
+.grid-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+    grid-column: 1 / -1;
+}
+
+.menu {
+    grid-column: 1 / 2;
+}
+
+.content {
+    grid-column: 2 / -1;
+}
+
+.footer {
+    grid-column: 1 / -1;
+}
+   </style>
+
+  </head>
+  <body>
+
+        <p>FLEXBOX HEADER</p>
+        <div class="flexbox-header">
+            <div>HOME</div>
+            <div>SEARCH</div>
+            <div>LOGOUT</div>
+        </div>
+        <br>
+        <p>GRID PAGE</p>
+        <div class="grid-page">
+            <div class="header">HEADER</div>
+            <div class="menu">MENU</div>
+            <div class="content">CONTENT</div>
+            <div class="footer">FOOTER</div>
+        </div>
+    </body>
+</html>
